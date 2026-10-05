@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만복영험 10단계 제사 의식 신령한 부적 시스템</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        talisman: {
+                            paperYellow: '#f4e4bc',
+                            paperDarkYellow: '#d6c08c',
+                            cinnabar: '#c0392b',
+                            cinnabarGlow: '#ff4d4d',
+                            gold: '#ffd700',
+                            goldDark: '#b8860b',
+                            darkBg: '#0b0b0e',
+                            darkCard: '#15151e',
+                            darkBorder: '#2a2a3a',
+                            mysticPurple: '#1f132b'
+                        }
+                    },
+                    fontFamily: {
+                        batang: ['Gowun Batang', 'serif'],
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'bounce-short': 'bounce 0.8s ease-in-out 1',
+                        'stamp-impact': 'stampImpact 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards'
+                    },
+                    keyframes: {
+                        stampImpact: {
+                            '0%': { transform: 'scale(3) rotate(-15deg)', opacity: '0' },
+                            '70%': { transform: 'scale(0.9) rotate(2deg)', opacity: '1' },
+                            '100%': { transform: 'scale(1) rotate(0deg)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and ambient styles */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #0b0b0e;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .font-batang { font-family: 'Gowun Batang', serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+
+        /* Traditional paper texture overlay */
+        .paper-texture {
+            background-image: radial-gradient(rgba(0,0,0,0.08) 1px, transparent 0);
+            background-size: 12px 12px;
+        }
+
+        /* Gold metallic text gradient */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff2a3 0%, #ffd700 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Cinnabar red text gradient */
+        .cinnabar-gradient-text {
+            background: linear-gradient(135deg, #ff6b6b 0%, #c0392b 60%, #800000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Screen shake keyframes for seal stamp */
+        @keyframes screenShake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-8px, 6px) rotate(-1deg); }
+            40% { transform: translate(8px, -6px) rotate(1deg); }
+            60% { transform: translate(-5px, -4px) rotate(0deg); }
+            80% { transform: translate(5px, 4px) rotate(0.5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        .animate-shake {
+            animation: screenShake 0.4s ease-in-out;
+        }
+
+        /* Custom glow effects */
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+        }
+
+        .cinnabar-glow {
+            box-shadow: 0 0 25px rgba(192, 57, 43, 0.35);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-talisman-darkBg text-slate-100 transition-colors duration-300">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 bg-talisman-darkBg/90 backdrop-blur-md border-b border-talisman-darkBorder/80 px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo & Brand Title -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('create')">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 via-red-600 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/40">
+                    <span class="font-batang font-bold text-xl text-yellow-100">福</span>
+                </div>
+                <div>
+                    <h1 class="font-batang font-bold text-lg md:text-xl text-amber-200 tracking-wide flex items-center gap-2">
+                        萬福靈驗 <span class="text-xs px-2 py-0.5 rounded bg-red-900/60 border border-red-500/40 text-red-200 font-sans">10단계 제사 의식</span>
+                    </h1>
+                    <p class="text-xs text-slate-400 font-sans hidden sm:block">천지신명 기원 게임 & 액운 소진 부적 시스템</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex items-center space-x-1 md:space-x-2">
+                <button onclick="switchTab('create')" id="nav-create" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                    <i data-lucide="wand-2" class="w-4 h-4"></i>
+                    <span>부적 제작</span>
+                </button>
+                <button onclick="switchTab('gallery')" id="nav-gallery" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>부적 도감</span>
+                    <span id="gallery-count-badge" class="ml-1 text-xs px-1.5 py-0.2 rounded-full bg-slate-700 text-amber-300">0</span>
+                </button>
+                <button onclick="switchTab('guide')" id="nav-guide" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 hidden md:flex">
+                    <i data-lucide="scroll" class="w-4 h-4"></i>
+                    <span>의식 소개</span>
+                </button>
+
+                <div class="h-5 w-[1px] bg-slate-700 mx-1"></div>
+
+                <!-- Theme & Sound Toggles -->
+                <button onclick="toggleAudioMute()" id="audio-toggle-btn" class="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-amber-300 transition-colors" title="음향 효과 켜기/끄기">
+                    <i data-lucide="volume-2" id="audio-icon" class="w-4 h-4"></i>
+                </button>
+
+                <!-- User Auth Area -->
+                <div id="user-auth-area" class="flex items-center ml-2">
+                    <button onclick="openAuthModal()" id="login-btn" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-medium bg-amber-600/30 hover:bg-amber-600/50 text-amber-200 border border-amber-500/30 transition-all flex items-center gap-1">
+                        <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                        <span id="user-display-name">로그인</span>
+                    </button>
+                </div>
+                <div class="flex items-center gap-1 ml-1">
+                    <button onclick="createJsonDatabaseFile()" class="px-2 py-1.5 rounded-lg text-[10px] bg-slate-800 text-amber-300 border border-slate-700">새 JSON</button>
+                    <button onclick="openJsonDatabaseFile()" class="px-2 py-1.5 rounded-lg text-[10px] bg-slate-800 text-slate-200 border border-slate-700">JSON 열기</button>
+                    <button onclick="saveJsonDatabaseFile()" class="px-2 py-1.5 rounded-lg text-[10px] bg-amber-700/30 text-amber-200 border border-amber-500/30">JSON 저장</button>
+                </div>
+            </div >
+        </div>
+    </header>
+
+    <!-- Main Workspace Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-6 space-y-6">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: TALISMAN CREATOR (부적 제작) -->
+        <!-- ========================================== -->
+        <section id="tab-create" class="tab-content grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Left Control Panel (Inputs & Style Options) -->
+            <div class="lg:col-span-5 bg-talisman-darkCard/90 border border-talisman-darkBorder rounded-2xl p-5 md:p-6 space-y-5 shadow-xl">
+                <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+                    <h2 class="text-lg font-batang font-bold text-amber-300 flex items-center gap-2">
+                        <i data-lucide="pen-tool" class="w-5 h-5 text-amber-400"></i>
+                        소원 및 부적 설정
+                    </h2>
+                    <span class="text-xs text-slate-400">정성껏 기운을 담으세요</span>
+                </div>
+
+                <!-- Wish Category Selector -->
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">소원 분야 선택</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="category-button-group">
+                        <button onclick="setCategory('boss')" id="cat-boss" class="cat-btn active p-2.5 rounded-xl border text-left transition-all text-xs flex flex-col justify-between bg-amber-950/40 border-amber-500/80 text-amber-200">
+                            <span class="font-bold flex items-center gap-1"><i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400"></i> 보스 득템</span>
+                            <span class="text-[10px] text-slate-400 mt-1">극악 드랍률 아이템</span>
+                        </button>
+                        <button onclick="setCategory('upgrade')" id="cat-upgrade" class="cat-btn p-2.5 rounded-xl border text-left transition-all text-xs flex flex-col justify-between bg-slate-900/60 border-slate-700 text-slate-300 hover:border-slate-500">
+                            <span class="font-bold flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> 장비 강화</span>
+                            <span class="text-[10px] text-slate-400 mt-1">최고 단계 강화 성공</span>
+                        </button>
+                        <button onclick="setCategory('gacha')" id="cat-gacha" class="cat-btn p-2.5 rounded-xl border text-left transition-all text-xs flex flex-col justify-between bg-slate-900/60 border-slate-700 text-slate-300 hover:border-slate-500">
+                            <span class="font-bold flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> 가챠 소환</span>
+                            <span class="text-[10px] text-slate-400 mt-1">SSR / 전설 픽업</span>
+                        </button>
+                        <button onclick="setCategory('quest')" id="cat-quest" class="cat-btn p-2.5 rounded-xl border text-left transition-all text-xs flex flex-col justify-between bg-slate-900/60 border-slate-700 text-slate-300 hover:border-slate-500">
+                            <span class="font-bold flex items-center gap-1"><i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-400"></i> 칭호 / 업적</span>
+                            <span class="text-[10px] text-slate-400 mt-1">난공불락 퀘스트</span>
+                        </button>
+                        <button onclick="setCategory('custom')" id="cat-custom" class="cat-btn col-span-2 sm:col-span-1 p-2.5 rounded-xl border text-left transition-all text-xs flex flex-col justify-between bg-slate-900/60 border-slate-700 text-slate-300 hover:border-slate-500">
+                            <span class="font-bold flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-amber-400"></i> 기타 (직접 입력)</span>
+                            <span class="text-[10px] text-slate-400 mt-1">자유 소원 발원</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Wish Input (Appears smoothly) -->
+                <div id="custom-wish-container" class="space-y-1 hidden transition-all">
+                    <label class="block text-xs font-semibold text-slate-300">맞춤 소원 제목</label>
+                    <input type="text" id="custom-wish-input" placeholder="예: 로또 1등 당첨, 시험 합격, 취업 성공" 
+                           oninput="updateTalismanCanvas()"
+                           class="w-full bg-slate-900/80 border border-amber-500/40 rounded-xl px-3 py-2 text-sm text-amber-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50">
+                </div>
+
+                <!-- Wish Details / Item Name Input -->
+                <div class="space-y-1">
+                    <label class="block text-xs font-semibold text-slate-300 flex justify-between">
+                        <span>성취 대상 (아이템명 / 소원 내용)</span>
+                        <span class="text-slate-500 text-[11px]" id="wish-owner-label">발원자: 무명</span>
+                    </label>
+                    <input type="text" id="wish-target-input" value="신화급 전설 아이템 득템" 
+                           oninput="updateTalismanCanvas()"
+                           class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-amber-200 font-batang placeholder-slate-500 focus:outline-none focus:border-amber-500">
+                </div>
+
+                <!-- Owner Name Input -->
+                <div class="space-y-1">
+                    <label class="block text-xs font-semibold text-slate-300">발원자 성함 (게임 닉네임)</label>
+                    <input type="text" id="wish-owner-input" value="소원성취자" 
+                           oninput="updateWishOwnerLabel(); updateTalismanCanvas();"
+                           class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500">
+                </div>
+
+                <!-- Talisman Paper Style Selector -->
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-slate-300">부적 종이 재질 선택</label>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button onclick="setPaperStyle('yellow')" id="paper-yellow" class="paper-style-btn active border-2 border-amber-400 rounded-xl p-2 bg-[#f4e4bc] text-amber-950 font-batang text-xs font-bold text-center shadow">
+                            황천괴황지
+                        </button>
+                        <button onclick="setPaperStyle('red')" id="paper-red" class="paper-style-btn border border-slate-700 rounded-xl p-2 bg-[#8b0000] text-amber-200 font-batang text-xs font-bold text-center">
+                            진홍염화지
+                        </button>
+                        <button onclick="setPaperStyle('dark')" id="paper-dark" class="paper-style-btn border border-slate-700 rounded-xl p-2 bg-[#1a1a24] text-amber-300 font-batang text-xs font-bold text-center">
+                            영겁흑요지
+                        </button>
+                        <button onclick="setPaperStyle('jade')" id="paper-jade" class="paper-style-btn border border-slate-700 rounded-xl p-2 bg-[#e2f0d9] text-emerald-950 font-batang text-xs font-bold text-center">
+                            백옥청정지
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cinnabar Seal Stamp Selector -->
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-slate-300">주사 인장(印章) 선택</label>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button onclick="setSeal('manbok')" id="seal-manbok" class="seal-style-btn active border-2 border-red-500 rounded-xl p-2 bg-red-950/40 text-red-300 font-batang text-xs font-bold text-center">
+                            萬福 (만복)
+                        </button>
+                        <button onclick="setSeal('daegil')" id="seal-daegil" class="seal-style-btn border border-slate-700 rounded-xl p-2 bg-slate-900 text-slate-400 font-batang text-xs font-bold text-center">
+                            大吉 (대길)
+                        </button>
+                        <button onclick="setSeal('pilseung')" id="seal-pilseung" class="seal-style-btn border border-slate-700 rounded-xl p-2 bg-slate-900 text-slate-400 font-batang text-xs font-bold text-center">
+                            必勝 (필승)
+                        </button>
+                        <button onclick="setSeal('bongin')" id="seal-bongin" class="seal-style-btn border border-slate-700 rounded-xl p-2 bg-slate-900 text-slate-400 font-batang text-xs font-bold text-center">
+                            封印 (봉인)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Upload Target Photo (Optional screenshot / item photo) -->
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-slate-300 flex justify-between items-center">
+                        <span>대상 이미지 첨부 (선택)</span>
+                        <span class="text-[10px] text-amber-400">아이템/몬스터 스크린샷</span>
+                    </label>
+                    <div class="flex items-center gap-3">
+                        <input type="file" id="target-photo-input" accept="image/*" class="hidden" onchange="handleFileUpload(event)">
+                        <button onclick="document.getElementById('target-photo-input').click()" class="flex-1 px-3 py-2 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700 text-xs text-slate-300 flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="image-plus" class="w-4 h-4 text-amber-400"></i>
+                            <span id="photo-file-name">이미지 파일 선택</span>
+                        </button>
+                        <button onclick="removePhoto()" id="remove-photo-btn" class="hidden px-2.5 py-2 rounded-xl bg-red-900/40 border border-red-500/30 text-red-300 text-xs hover:bg-red-800/50">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Drawing Ink Canvas Tools -->
+                <div class="pt-2 border-t border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                            <i data-lucide="brush" class="w-3.5 h-3.5 text-red-400"></i>
+                            부적 직접 붓글씨 쓰기
+                        </span>
+                        <div class="flex items-center gap-1">
+                            <button onclick="setBrushColor('#c0392b')" class="w-5 h-5 rounded-full bg-red-600 border border-white/40 shadow" title="주사 붉은 먹"></button>
+                            <button onclick="setBrushColor('#ffd700')" class="w-5 h-5 rounded-full bg-yellow-400 border border-white/40 shadow" title="황금 먹"></button>
+                            <button onclick="setBrushColor('#111111')" class="w-5 h-5 rounded-full bg-slate-900 border border-white/40 shadow" title="검은 먹"></button>
+                            <button onclick="clearCustomDrawing()" class="text-[11px] px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 ml-1">초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: High-DPI Live Preview Canvas & Action Controls -->
+            <div class="lg:col-span-7 flex flex-col items-center justify-between bg-talisman-darkCard/90 border border-talisman-darkBorder rounded-2xl p-5 md:p-6 shadow-2xl space-y-5">
+                
+                <div class="w-full flex items-center justify-between border-b border-slate-800 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <h3 class="font-batang text-amber-200 font-bold text-base">신령한 부적 실시간 현신</h3>
+                    </div>
+                    <span class="text-xs text-slate-400 font-mono">HIGH-DPI CANVAS</span>
+                </div>
+
+                <!-- Canvas Wrapper with Traditional Border Box -->
+                <div id="talisman-canvas-wrapper" class="relative p-3 rounded-2xl bg-slate-950 border border-amber-500/30 shadow-2xl max-w-md w-full flex flex-col items-center group">
+                    <canvas id="talismanCanvas" width="450" height="650" class="w-full h-auto max-w-[380px] rounded-xl shadow-inner cursor-crosshair transition-all duration-300"></canvas>
+                    
+                    <!-- Overlay Hints -->
+                    <div class="absolute bottom-6 bg-black/70 backdrop-blur border border-amber-500/30 px-3 py-1 rounded-full text-[11px] text-amber-200 pointer-events-none transition-opacity opacity-80 group-hover:opacity-10">
+                        <i data-lucide="hand" class="inline w-3 h-3 mr-1"></i> 붓으로 부적 위에 직접 서명/진언을 그릴 수 있습니다
+                    </div>
+                </div>
+
+                <!-- Action Button Cluster -->
+                <div class="w-full space-y-3 pt-2">
+                    <button onclick="startRitualCeremony()" 
+                            class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-red-800 via-red-600 to-amber-700 hover:from-red-700 hover:to-amber-600 text-yellow-100 font-batang font-bold text-lg md:text-xl shadow-lg shadow-red-950/60 border border-amber-400/40 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0.5 group">
+                        <i data-lucide="flame" class="w-6 h-6 text-yellow-300 animate-bounce"></i>
+                        <span>🔥 10단계 신령한 제사 의식 치르고 봉인하기</span>
+                        <i data-lucide="sparkle" class="w-5 h-5 text-yellow-300 group-hover:rotate-45 transition-transform"></i>
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="downloadCanvasImage()" class="py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="download" class="w-4 h-4 text-amber-400"></i>
+                            부적 이미지 저장 (PNG)
+                        </button>
+                        <button onclick="resetTalismanForm()" class="py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-400 hover:text-slate-200 flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                            설정 초기화
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: TALISMAN GALLERY / ARCHIVE (부적 도감) -->
+        <!-- ========================================== -->
+        <section id="tab-gallery" class="tab-content hidden space-y-6">
+            <!-- Gallery Filters Header -->
+            <div class="bg-talisman-darkCard border border-talisman-darkBorder rounded-2xl p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-batang font-bold text-amber-300 flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-5 h-5 text-amber-400"></i>
+                        봉인된 부적 도감 (만복록)
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">10단계 제사를 통해 봉인된 신령한 부적 목록입니다.</p>
+                </div>
+
+                <!-- Status Filter Tabs -->
+                <div class="flex items-center bg-slate-900/80 p-1 rounded-xl border border-slate-800">
+                    <button onclick="filterGallery('all')" id="filter-all" class="filter-tab active px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-amber-500/20 text-amber-300">
+                        전체 보기
+                    </button>
+                    <button onclick="filterGallery('active')" id="filter-active" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-200">
+                        기원 중 🙏
+                    </button>
+                    <button onclick="filterGallery('fulfilled')" id="filter-fulfilled" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-200">
+                        성취 완료 ✨
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Cards Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Dynamic Javascript Cards render here -->
+            </div>
+
+            <!-- Empty State Placeholder -->
+            <div id="gallery-empty" class="hidden bg-talisman-darkCard/50 border border-dashed border-slate-800 rounded-2xl p-12 text-center space-y-3">
+                <i data-lucide="scroll" class="w-12 h-12 text-slate-600 mx-auto"></i>
+                <h3 class="text-base font-batang text-slate-400">보관된 부적이 없습니다.</h3>
+                <p class="text-xs text-slate-500">새로운 소원 부적을 제작하고 10단계 제사를 치러보세요!</p>
+                <button onclick="switchTab('create')" class="px-4 py-2 rounded-xl bg-amber-600/30 border border-amber-500/40 text-amber-200 text-xs font-bold hover:bg-amber-600/50 transition-all">
+                    부적 제작하러 가기
+                </button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: RITUAL DOCTRINE & GUIDE (의식 소개) -->
+        <!-- ========================================== -->
+        <section id="tab-guide" class="tab-content hidden space-y-6">
+            <div class="bg-talisman-darkCard border border-talisman-darkBorder rounded-2xl p-6 md:p-8 space-y-8 max-w-4xl mx-auto">
+                <div class="text-center space-y-2 border-b border-slate-800 pb-6">
+                    <span class="text-xs font-mono text-amber-400 tracking-widest uppercase">TRADITIONAL RITUAL GUIDE</span>
+                    <h2 class="text-2xl md:text-3xl font-batang font-bold text-amber-200">萬福靈驗 10단계 제사 의식의 시말</h2>
+                    <p class="text-sm text-slate-400 max-w-xl mx-auto">예로부터 신령한 기운을 모아 간절한 소원을 하늘에 전하는 10가지 정성 어린 봉인 절차입니다.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="guide-steps-list">
+                    <!-- Javascript populates step guides -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- 10-STEP RITUAL CEREMONY OVERLAY MODAL -->
+    <!-- ========================================== -->
+    <div id="ritual-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+        
+        <!-- Magic Circle Background Canvas -->
+        <canvas id="magicCircleCanvas" class="absolute inset-0 w-full h-full opacity-35 pointer-events-none"></canvas>
+
+        <div id="ritual-card" class="relative max-w-2xl w-full bg-talisman-darkCard/90 border border-amber-500/40 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col items-center text-center space-y-6 transform scale-95 transition-all duration-500 overflow-hidden">
+            
+            <!-- Step Progress Top Bar -->
+            <div class="w-full flex items-center justify-between border-b border-amber-500/20 pb-4">
+                <div class="flex items-center gap-2">
+                    <span id="ritual-badge-step" class="px-3 py-1 rounded-full bg-red-900/60 border border-red-500/50 text-amber-200 text-xs font-batang font-bold">
+                        1 / 10 단계
+                    </span>
+                    <span id="ritual-badge-percent" class="text-xs font-mono text-amber-400">10% Complete</span>
+                </div>
+                <button onclick="closeRitualModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Progress Bar Indicator -->
+            <div class="w-full bg-slate-900 h-2 rounded-full overflow-hidden border border-slate-800">
+                <div id="ritual-progress-bar" class="bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 h-full w-[10%] transition-all duration-500"></div>
+            </div>
+
+            <!-- Step Visual Emblem Container -->
+            <div class="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center my-2">
+                <!-- Rotating Bagua Ring -->
+                <div class="absolute inset-0 border-2 border-dashed border-amber-500/40 rounded-full animate-spin-slow"></div>
+                <div class="absolute inset-2 border border-red-500/30 rounded-full animate-pulse-slow"></div>
+                
+                <!-- Main Step Icon & Hanja -->
+                <div id="ritual-icon-box" class="w-24 h-24 rounded-full bg-gradient-to-br from-red-950 via-slate-900 to-amber-950 border-2 border-amber-400/60 flex flex-col items-center justify-center shadow-xl shadow-red-900/40 transition-all">
+                    <span id="ritual-hanja" class="font-batang font-bold text-2xl text-amber-300">焚香</span>
+                    <span id="ritual-icon-sub" class="text-[10px] text-red-300 font-mono">STEP 01</span>
+                </div>
+            </div>
+
+            <!-- Step Title & Narrative Description -->
+            <div class="space-y-2 max-w-lg">
+                <h3 id="ritual-title" class="font-batang text-2xl md:text-3xl font-bold text-amber-200">
+                    [1단계] 분향 강신 (焚香降神)
+                </h3>
+                <p id="ritual-desc" class="text-sm md:text-base text-slate-300 font-batang leading-relaxed min-h-[50px] flex items-center justify-center">
+                    향을 피워 천지신명과 수호령을 정중히 모십니다. 부정한 기운이 사라지고 경건함이 차오릅니다.
+                </p>
+            </div>
+
+            <!-- Live Talisman Mini Seal Preview -->
+            <div class="w-full bg-slate-950/80 border border-slate-800 rounded-2xl p-3 flex items-center justify-around text-xs">
+                <div class="text-left">
+                    <span class="text-slate-500 block text-[10px]">발원 대상</span>
+                    <span id="ritual-preview-target" class="font-batang font-bold text-amber-300">신화급 아이템</span>
+                </div>
+                <div class="h-6 w-[1px] bg-slate-800"></div>
+                <div class="text-left">
+                    <span class="text-slate-500 block text-[10px]">소원 정성도</span>
+                    <span id="ritual-preview-power" class="font-batang font-bold text-emerald-400">100% 영험 보장</span>
+                </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="w-full flex items-center gap-3 pt-2">
+                <button onclick="toggleAutoRitual()" id="auto-ritual-btn" class="flex-1 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-amber-300 flex items-center justify-center gap-2 transition-all">
+                    <i data-lucide="play" id="auto-btn-icon" class="w-4 h-4"></i>
+                    <span id="auto-btn-text">자동 진행 시작</span>
+                </button>
+                <button onclick="nextRitualStep()" id="next-step-btn" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-red-700 to-amber-600 hover:from-red-600 hover:to-amber-500 text-yellow-100 font-batang text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all">
+                    <span>다음 단계 진행</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FULFILLMENT FIRE DISINTEGRATION MODAL -->
+    <!-- ========================================== -->
+    <div id="burn-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+        <div class="max-w-md w-full bg-talisman-darkCard border border-amber-500/40 rounded-3xl p-6 text-center space-y-5 relative overflow-hidden">
+            <h3 class="font-batang text-xl font-bold text-amber-200">소원 성취 부적 태우기 의식</h3>
+            <p class="text-xs text-slate-400">소원이 성취되었습니다! 부적을 불태워 하늘로 감사함의 소신(燒身)을 올립니다.</p>
+            
+            <div class="relative w-full h-72 rounded-2xl overflow-hidden bg-black flex items-center justify-center">
+                <canvas id="burnCanvas" width="380" height="480" class="w-full h-full object-contain"></canvas>
+            </div>
+
+            <button onclick="closeBurnModal()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200">
+                의식 종료 및 확정
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- USER AUTHENTICATION MODAL -->
+    <!-- ========================================== -->
+    <div id="auth-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="max-w-sm w-full bg-talisman-darkCard border border-talisman-darkBorder rounded-2xl p-6 space-y-4 shadow-2xl relative">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+
+            <div class="text-center space-y-1">
+                <h3 class="font-batang font-bold text-lg text-amber-300">신령한 만복록 사용자</h3>
+                <div id="json-db-status" class="text-[10px] text-slate-500">JSON DB: localStorage 백업 모드</div>
+                <p class="text-xs text-slate-400">소원 부적을 내 계정에 영구 보관하세요.</p>
+            </div>
+
+            <form onsubmit="handleAuthSubmit(event)" class="space-y-3 pt-2">
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">사용자 ID / 닉네임</label>
+                    <input type="text" id="auth-username" required placeholder="닉네임 입력" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">비밀번호</label>
+                    <input type="password" id="auth-password" required placeholder="비밀번호" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-amber-100 font-bold text-xs shadow-lg transition-all">
+                    로그인 / 신규 등록
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast Box -->
+    <div id="toast-box" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 border border-amber-500/50 text-amber-200 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2 text-xs font-medium">
+        <i data-lucide="info" class="w-4 h-4 text-amber-400"></i>
+        <span id="toast-msg">알림 메시지</span>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <!-- ========================================== -->
+    <script>
+        // Global Application State Variables
+        const state = {
+            currentTab: 'create',
+            category: 'boss',
+            paperStyle: 'yellow',
+            sealStyle: 'manbok',
+            wishTarget: '신화급 전설 아이템 득템',
+            wishOwner: '소원성취자',
+            customWishText: '',
+            targetPhotoImg: null,
+            brushColor: '#c0392b',
+            customStrokes: [],
+            isDrawing: false,
+            currentStep: 1,
+            autoRitualInterval: null,
+            audioMuted: false,
+            audioCtx: null,
+            currentUser: null,
+            galleryFilter: 'all',
+            activeBurningTalismanId: null
+        };
+
+        // 10-Step Traditional Korean Ritual Definition Data
+        const RITUAL_STEPS = [
+            {
+                step: 1,
+                hanja: "焚香",
+                title: "[1단계] 분향 강신 (焚香降神)",
+                desc: "향을 피워 천지신명과 천상 수호령을 정중히 제단으로 모십니다. 부정한 기운이 물러납니다.",
+                sound: "jing"
+            },
+            {
+                step: 2,
+                hanja: "淨水",
+                title: "[2단계] 정수 정화 (淨水淨化)",
+                desc: "맑고 깨끗한 옥수로 제단을 청결히 정화하고 부정한 기운을 단번에 씻어냅니다.",
+                sound: "moktak"
+            },
+            {
+                step: 3,
+                hanja: "招魂",
+                title: "[3단계] 초혼 환희 (招魂歡喜)",
+                desc: "게임과 모든 운명을 주관하는 대박 수호신령님을 기쁘게 초혼합니다.",
+                sound: "moktak"
+            },
+            {
+                step: 4,
+                hanja: "焚經",
+                title: "[4단계] 분경 축문 (焚經祝文)",
+                desc: "발원자의 간절한 소원 문구를 축문으로 정성껏 고하며 하늘의 응답을 구합니다.",
+                sound: "moktak"
+            },
+            {
+                step: 5,
+                hanja: "槐黃",
+                title: "[5단계] 괴황 진언 (槐黃眞言)",
+                desc: "영험함이 가장 높기로 이름난 황천괴황지 종이에 무량한 신령 기운을 주입합니다.",
+                sound: "moktak"
+            },
+            {
+                step: 6,
+                hanja: "朱砂",
+                title: "[6단계] 주사 묵즙 (朱砂墨汁)",
+                desc: "잡귀와 액운을 물리치는 영험한 붉은 천연 주사 먹을 정성스레 개어 준비합니다.",
+                sound: "moktak"
+            },
+            {
+                step: 7,
+                hanja: "七星",
+                title: "[7단계] 칠성 응축 (七星凝縮)",
+                desc: "북두칠성의 찬란한 대박 운을 부적 중앙으로 끌어모아 응축시킵니다.",
+                sound: "jing"
+            },
+            {
+                step: 8,
+                hanja: "必得",
+                title: "[8단계] 필득 획선 (必得劃線)",
+                desc: "신령한 붓끝으로 소원 성취와 필득의 상징 진언을 정밀하게 그려 넣습니다.",
+                sound: "moktak"
+            },
+            {
+                step: 9,
+                hanja: "封印",
+                title: "[9단계] 주사 봉인 (朱砂封印)",
+                desc: "붉은 주사 인장을 쿵! 찍어 100% 영험의 인장을 강렬하게 봉인합니다.",
+                sound: "seal"
+            },
+            {
+                step: 10,
+                hanja: "成就",
+                title: "[10단계] 성취 완수 (成就完遂)",
+                desc: "만복영험 100% 소원 부적 봉인이 완수되었습니다! 만복록에 영구 등재됩니다.",
+                sound: "jing"
+            }
+        ];
+
+        // Web Audio API Sound Synthesizer (No external sound files)
+        function initAudioContext() {
+            if (!state.audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                state.audioCtx = new AudioContext();
+            }
+            if (state.audioCtx.state === 'suspended') {
+                state.audioCtx.resume();
+            }
+        }
+
+        // Deep Gong / Jing Sound Synthesis
+        function playJingSound() {
+            if (state.audioMuted) return;
+            initAudioContext();
+            const ctx = state.audioCtx;
+            const now = ctx.currentTime;
+
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            const filter = ctx.createBiquadFilter();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(140, now);
+            osc.frequency.exponentialRampToValueAtTime(70, now + 2.5);
+
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(800, now);
+
+            gain.gain.setValueAtTime(0.7, now);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.0);
+
+            osc.connect(filter);
+            filter.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now);
+            osc.stop(now + 3.0);
+        }
+
+        // Traditional Moktak (Woodblock) Sound Synthesis
+        function playMoktakSound() {
+            if (state.audioMuted) return;
+            initAudioContext();
+            const ctx = state.audioCtx;
+            const now = ctx.currentTime;
+
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(600, now);
+            osc.frequency.exponentialRampToValueAtTime(200, now + 0.12);
+
+            gain.gain.setValueAtTime(0.8, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now);
+            osc.stop(now + 0.15);
+        }
+
+        // Heavy Cinnabar Seal Slam Impact Sound
+        function playSealSlamSound() {
+            if (state.audioMuted) return;
+            initAudioContext();
+            const ctx = state.audioCtx;
+            const now = ctx.currentTime;
+
+            // Sub bass impact
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(160, now);
+            osc.frequency.exponentialRampToValueAtTime(25, now + 0.35);
+
+            gain.gain.setValueAtTime(1.0, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now);
+            osc.stop(now + 0.4);
+
+            // Trigger screen shake visual effect
+            const ritualCard = document.getElementById('ritual-card');
+            if (ritualCard) {
+                ritualCard.classList.add('animate-shake');
+                setTimeout(() => ritualCard.classList.remove('animate-shake'), 400);
+            }
+        }
+
+        function toggleAudioMute() {
+            state.audioMuted = !state.audioMuted;
+            const icon = document.getElementById('audio-icon');
+            if (state.audioMuted) {
+                icon.setAttribute('data-lucide', 'volume-x');
+                showToast("음향 효과가 켜지지 않았습니다 (음소거)");
+            } else {
+                icon.setAttribute('data-lucide', 'volume-2');
+                initAudioContext();
+                playMoktakSound();
+                showToast("신령한 음향 효과 활성화!");
+            }
+            lucide.createIcons();
+        }
+
+        // Canvas Rendering & Drawing Logic
+        function initTalismanCanvas() {
+            const canvas = document.getElementById('talismanCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Mouse & Touch events for drawing on talisman paper
+            let drawing = false;
+
+            function getPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                return {
+                    x: (clientX - rect.left) * (canvas.width / rect.width),
+                    y: (clientY - rect.top) * (canvas.height / rect.height)
+                };
+            }
+
+            canvas.addEventListener('mousedown', (e) => {
+                drawing = true;
+                const p = getPos(e);
+                state.customStrokes.push([{ x: p.x, y: p.y, color: state.brushColor }]);
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (!drawing) return;
+                const p = getPos(e);
+                const currentStroke = state.customStrokes[state.customStrokes.length - 1];
+                if (currentStroke) {
+                    currentStroke.push({ x: p.x, y: p.y, color: state.brushColor });
+                    updateTalismanCanvas();
+                }
+            });
+
+            window.addEventListener('mouseup', () => { drawing = false; });
+
+            // Touch events for mobile responsiveness
+            canvas.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                drawing = true;
+                const p = getPos(e);
+                state.customStrokes.push([{ x: p.x, y: p.y, color: state.brushColor }]);
+            });
+
+            canvas.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+                if (!drawing) return;
+                const p = getPos(e);
+                const currentStroke = state.customStrokes[state.customStrokes.length - 1];
+                if (currentStroke) {
+                    currentStroke.push({ x: p.x, y: p.y, color: state.brushColor });
+                    updateTalismanCanvas();
+                }
+            });
+
+            canvas.addEventListener('touchend', () => { drawing = false; });
+
+            updateTalismanCanvas();
+        }
+
+        function setBrushColor(color) {
+            state.brushColor = color;
+            showToast("붓 색상이 변경되었습니다.");
+        }
+
+        function clearCustomDrawing() {
+            state.customStrokes = [];
+            updateTalismanCanvas();
+            showToast("붓글씨가 초기화되었습니다.");
+        }
+
+        function updateTalismanCanvas() {
+            const canvas = document.getElementById('talismanCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width;
+            const h = canvas.height;
+
+            // 1. Paper Background Fill
+            let bgColor1 = '#f4e4bc', bgColor2 = '#d6c08c';
+            let textColor = '#c0392b';
+
+            if (state.paperStyle === 'red') {
+                bgColor1 = '#8b0000'; bgColor2 = '#4a0000'; textColor = '#ffd700';
+            } else if (state.paperStyle === 'dark') {
+                bgColor1 = '#1a1a24'; bgColor2 = '#0b0b12'; textColor = '#ffd700';
+            } else if (state.paperStyle === 'jade') {
+                bgColor1 = '#e2f0d9'; bgColor2 = '#b8d8a8'; textColor = '#1b4332';
+            }
+
+            const bgGrad = ctx.createLinearGradient(0, 0, w, h);
+            bgGrad.addColorStop(0, bgColor1);
+            bgGrad.addColorStop(1, bgColor2);
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, w, h);
+
+            // Traditional paper noise texture
+            ctx.fillStyle = 'rgba(0,0,0,0.03)';
+            for (let i = 0; i < 400; i++) {
+                ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+            }
+
+            // 2. Traditional Double Outer Border
+            ctx.strokeStyle = textColor;
+            ctx.lineWidth = 6;
+            ctx.strokeRect(16, 16, w - 32, h - 32);
+
+            ctx.lineWidth = 2;
+            ctx.strokeRect(22, 22, w - 44, h - 44);
+
+            // Four Corner Hanja Accents
+            ctx.font = '700 16px Gowun Batang';
+            ctx.fillStyle = textColor;
+            ctx.textAlign = 'center';
+            ctx.fillText('萬', 34, 40);
+            ctx.fillText('福', w - 34, 40);
+            ctx.fillText('靈', 34, h - 30);
+            ctx.fillText('驗', w - 34, h - 30);
+
+            // Header Title
+            ctx.font = 'bold 20px Gowun Batang';
+            ctx.fillText('萬福靈驗 勅令', w / 2, 55);
+
+            // 3. User Target Photo Overlay (if attached)
+            if (state.targetPhotoImg) {
+                ctx.save();
+                ctx.globalAlpha = 0.35;
+                ctx.beginPath();
+                ctx.arc(w / 2, 140, 55, 0, Math.PI * 2);
+                ctx.clip();
+                ctx.drawImage(state.targetPhotoImg, w / 2 - 55, 85, 110, 110);
+                ctx.restore();
+
+                ctx.strokeStyle = textColor;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(w / 2, 140, 55, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // 4. Central Calligraphy Mystical Runes
+            ctx.save();
+            ctx.fillStyle = textColor;
+            ctx.font = 'bold 36px Gowun Batang';
+            ctx.textAlign = 'center';
+
+            let yOffset = state.targetPhotoImg ? 230 : 130;
+
+            // Header Symbol
+            ctx.fillText('𱁬', w / 2, yOffset); // Traditional Daoist/Talisman Unicode Symbol
+            ctx.fillText('壽福富貴 必得', w / 2, yOffset + 45);
+
+            // Category & Wish Text
+            const wishText = getActiveWishText();
+            ctx.font = 'bold 22px Gowun Batang';
+            
+            // Text Wrap for Wish Text
+            const words = wishText.split('');
+            let line = '';
+            let currentY = yOffset + 95;
+
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n];
+                let metrics = ctx.measureText(testLine);
+                if (metrics.width > w - 100 && n > 0) {
+                    ctx.fillText(line, w / 2, currentY);
+                    line = words[n];
+                    currentY += 32;
+                } else {
+                    line = testLine;
+                }
+            }
+            ctx.fillText(line, w / 2, currentY);
+
+            // Owner Name Label
+            ctx.font = '14px Gowun Batang';
+            ctx.fillText(`발원자: ${state.wishOwner || '무명'}`, w / 2, currentY + 35);
+
+            // Bagua / Seven-Star Symbol Accent
+            ctx.font = '28px serif';
+            ctx.fillText('☰ ☲ ☵ ☷', w / 2, h - 145);
+
+            ctx.restore();
+
+            // 5. Custom Brush Strokes Render
+            state.customStrokes.forEach(stroke => {
+                if (stroke.length < 2) return;
+                ctx.beginPath();
+                ctx.strokeStyle = stroke[0].color;
+                ctx.lineWidth = 4;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.moveTo(stroke[0].x, stroke[0].y);
+                for (let i = 1; i < stroke.length; i++) {
+                    ctx.lineTo(stroke[i].x, stroke[i].y);
+                }
+                ctx.stroke();
+            });
+
+            // 6. Red Cinnabar Seal Stamp (Bottom Right)
+            renderSealStamp(ctx, w - 90, h - 100, state.sealStyle);
+        }
+
+        // Render Seal Stamp Symbol
+        function renderSealStamp(ctx, x, y, style) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(-0.08); // Slight realistic angle tilt
+
+            ctx.fillStyle = 'rgba(192, 57, 43, 0.85)';
+            ctx.strokeStyle = '#c0392b';
+            ctx.lineWidth = 3;
+
+            // Stamp Outer Box
+            ctx.strokeRect(-25, -25, 50, 50);
+            ctx.fillRect(-23, -23, 46, 46);
+
+            // Stamp Inner Hanja Text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 18px Gowun Batang';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            let sealText = '萬福';
+            if (style === 'daegil') sealText = '大吉';
+            else if (style === 'pilseung') sealText = '必勝';
+            else if (style === 'bongin') sealText = '封印';
+
+            ctx.fillText(sealText, 0, 0);
+
+            ctx.restore();
+        }
+
+        function getActiveWishText() {
+            if (state.category === 'custom') {
+                return state.customWishText || '간절한 맞춤 소원 성취';
+            }
+            return state.wishTarget || '신화급 전설 아이템 득템';
+        }
+
+        function setCategory(cat) {
+            state.category = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-amber-950/40', 'border-amber-500/80', 'text-amber-200');
+                btn.classList.add('bg-slate-900/60', 'border-slate-700', 'text-slate-300');
+            });
+
+            const activeBtn = document.getElementById(`cat-${cat}`);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-amber-950/40', 'border-amber-500/80', 'text-amber-200');
+            }
+
+            const customContainer = document.getElementById('custom-wish-container');
+            if (cat === 'custom') {
+                customContainer.classList.remove('hidden');
+            } else {
+                customContainer.classList.add('hidden');
+            }
+
+            // Preset wish defaults
+            const input = document.getElementById('wish-target-input');
+            if (cat === 'boss') input.value = "신화 보스 무기 드랍 득템";
+            else if (cat === 'upgrade') input.value = "+15 집행검 최고단계 강화 성공";
+            else if (cat === 'gacha') input.value = "SSR 픽업 영웅 10연차 소환";
+            else if (cat === 'quest') input.value = "전설 칭호 달성 & 퀘스트 완수";
+
+            state.wishTarget = input.value;
+            updateTalismanCanvas();
+        }
+
+        function setPaperStyle(style) {
+            state.paperStyle = style;
+            document.querySelectorAll('.paper-style-btn').forEach(btn => {
+                btn.classList.remove('active', 'border-2', 'border-amber-400');
+                btn.classList.add('border-slate-700');
+            });
+            const activeBtn = document.getElementById(`paper-${style}`);
+            if (activeBtn) activeBtn.classList.add('active', 'border-2', 'border-amber-400');
+            updateTalismanCanvas();
+        }
+
+        function setSeal(seal) {
+            state.sealStyle = seal;
+            document.querySelectorAll('.seal-style-btn').forEach(btn => {
+                btn.classList.remove('active', 'border-2', 'border-red-500', 'text-red-300', 'bg-red-950/40');
+                btn.classList.add('border-slate-700', 'text-slate-400', 'bg-slate-900');
+            });
+            const activeBtn = document.getElementById(`seal-${seal}`);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'border-2', 'border-red-500', 'text-red-300', 'bg-red-950/40');
+            }
+            updateTalismanCanvas();
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    state.targetPhotoImg = img;
+                    document.getElementById('photo-file-name').innerText = file.name;
+                    document.getElementById('remove-photo-btn').classList.remove('hidden');
+                    updateTalismanCanvas();
+                    showToast("대상 이미지가 성공적으로 첨부되었습니다.");
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function removePhoto() {
+            state.targetPhotoImg = null;
+            document.getElementById('target-photo-input').value = '';
+            document.getElementById('photo-file-name').innerText = '이미지 파일 선택';
+            document.getElementById('remove-photo-btn').classList.add('hidden');
+            updateTalismanCanvas();
+        }
+
+        function updateWishOwnerLabel() {
+            const ownerVal = document.getElementById('wish-owner-input').value;
+            state.wishOwner = ownerVal;
+            document.getElementById('wish-owner-label').innerText = `발원자: ${ownerVal || '무명'}`;
+        }
+
+        function resetTalismanForm() {
+            state.customStrokes = [];
+            state.targetPhotoImg = null;
+            document.getElementById('wish-target-input').value = '신화급 전설 아이템 득템';
+            document.getElementById('wish-owner-input').value = '소원성취자';
+            setCategory('boss');
+            setPaperStyle('yellow');
+            setSeal('manbok');
+            removePhoto();
+            showToast("모든 설정이 초기화되었습니다.");
+        }
+
+        // 10-Step Ritual Overlay Modal Execution Logic
+        function startRitualCeremony() {
+            initAudioContext();
+            state.currentStep = 1;
+            
+            const modal = document.getElementById('ritual-modal');
+            const card = document.getElementById('ritual-card');
+
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+            card.classList.remove('scale-95');
+            card.classList.add('scale-100');
+
+            // Render Preview Info
+            document.getElementById('ritual-preview-target').innerText = getActiveWishText();
+
+            updateRitualStepUI();
+            startMagicCircleAnimation();
+        }
+
+        function closeRitualModal() {
+            stopAutoRitual();
+            const modal = document.getElementById('ritual-modal');
+            const card = document.getElementById('ritual-card');
+
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+        }
+
+        function updateRitualStepUI() {
+            const stepData = RITUAL_STEPS[state.currentStep - 1];
+            if (!stepData) return;
+
+            document.getElementById('ritual-badge-step').innerText = `${stepData.step} / 10 단계`;
+            document.getElementById('ritual-badge-percent').innerText = `${stepData.step * 10}% Complete`;
+            document.getElementById('ritual-progress-bar').style.width = `${stepData.step * 10}%`;
+
+            document.getElementById('ritual-hanja').innerText = stepData.hanja;
+            document.getElementById('ritual-icon-sub').innerText = `STEP 0${stepData.step}`;
+            document.getElementById('ritual-title').innerText = stepData.title;
+            document.getElementById('ritual-desc').innerText = stepData.desc;
+
+            // Trigger Step Sound
+            if (stepData.sound === 'jing') playJingSound();
+            else if (stepData.sound === 'seal') playSealSlamSound();
+            else playMoktakSound();
+
+            // Next Button text at step 10
+            const nextBtn = document.getElementById('next-step-btn');
+            if (state.currentStep === 10) {
+                nextBtn.innerHTML = `<span>봉인 완성 및 도감 저장</span> <i data-lucide="check-circle" class="w-4 h-4"></i>`;
+            } else {
+                nextBtn.innerHTML = `<span>다음 단계 진행</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>`;
+            }
+            lucide.createIcons();
+        }
+
+        function nextRitualStep() {
+            if (state.currentStep < 10) {
+                state.currentStep++;
+                updateRitualStepUI();
+            } else {
+                // Completed Step 10
+                saveTalismanToDatabase();
+                closeRitualModal();
+                showToast("✨ 10단계 제사 완료! 부적이 봉인 및 도감에 저장되었습니다.");
+                switchTab('gallery');
+            }
+        }
+
+        function toggleAutoRitual() {
+            if (state.autoRitualInterval) {
+                stopAutoRitual();
+            } else {
+                document.getElementById('auto-btn-text').innerText = "자동 진행 중지";
+                document.getElementById('auto-btn-icon').setAttribute('data-lucide', 'pause');
+                lucide.createIcons();
+
+                state.autoRitualInterval = setInterval(() => {
+                    if (state.currentStep < 10) {
+                        nextRitualStep();
+                    } else {
+                        stopAutoRitual();
+                        saveTalismanToDatabase();
+                        closeRitualModal();
+                        showToast("✨ 10단계 제사 완료! 부적이 도감에 저장되었습니다.");
+                        switchTab('gallery');
+                    }
+                }, 1600);
+            }
+        }
+
+        function stopAutoRitual() {
+            if (state.autoRitualInterval) {
+                clearInterval(state.autoRitualInterval);
+                state.autoRitualInterval = null;
+            }
+            const btnText = document.getElementById('auto-btn-text');
+            const btnIcon = document.getElementById('auto-btn-icon');
+            if (btnText && btnIcon) {
+                btnText.innerText = "자동 진행 시작";
+                btnIcon.setAttribute('data-lucide', 'play');
+                lucide.createIcons();
+            }
+        }
+
+        // Magic Circle Background Visual Animation Engine
+        let magicCanvasAnimId = null;
+        function startMagicCircleAnimation() {
+            const canvas = document.getElementById('magicCircleCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let angle = 0;
+            const particles = Array.from({ length: 60 }, () => ({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                speedY: Math.random() * 1.5 + 0.5,
+                alpha: Math.random()
+            }));
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Floating Sparks
+                ctx.fillStyle = 'rgba(255, 215, 0, 0.6)';
+                particles.forEach(p => {
+                    p.y -= p.speedY;
+                    if (p.y < 0) p.y = canvas.height;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                // Central Dual Rotating Ring
+                const cx = canvas.width / 2;
+                const cy = canvas.height / 2;
+
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(angle);
+                ctx.strokeStyle = 'rgba(255, 215, 0, 0.25)';
+                ctx.lineWidth = 2;
+
+                ctx.beginPath();
+                ctx.arc(0, 0, 220, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.rotate(-angle * 2);
+                ctx.strokeStyle = 'rgba(192, 57, 43, 0.3)';
+                ctx.beginPath();
+                ctx.arc(0, 0, 180, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.restore();
+
+                angle += 0.005;
+                magicCanvasAnimId = requestAnimationFrame(animate);
+            }
+
+            if (magicCanvasAnimId) cancelAnimationFrame(magicCanvasAnimId);
+            animate();
+        }
+
+        // LocalStorage Database & Gallery Sync Management
+        function getTalismansFromDB() {
+            const raw = localStorage.getItem('talisman_data_db');
+            return raw ? JSON.parse(raw) : [];
+        }
+
+        function saveTalismanToDatabase() {
+            const canvas = document.getElementById('talismanCanvas');
+            const dataURL = canvas.toDataURL('image/png');
+
+            const newTalisman = {
+                id: 'tal_' + Date.now(),
+                owner: state.wishOwner || '무명',
+                wishText: getActiveWishText(),
+                category: state.category,
+                paperStyle: state.paperStyle,
+                createdAt: new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' }),
+                status: 'active', // active or fulfilled
+                imageData: dataURL
+            };
+
+            const db = getTalismansFromDB();
+            db.unshift(newTalisman);
+            localStorage.setItem('talisman_data_db', JSON.stringify(db));
+            renderGallery();
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            const emptyState = document.getElementById('gallery-empty');
+            const db = getTalismansFromDB();
+
+            const filtered = db.filter(item => {
+                if (state.galleryFilter === 'active') return item.status === 'active';
+                if (state.galleryFilter === 'fulfilled') return item.status === 'fulfilled';
+                return true;
+            });
+
+            document.getElementById('gallery-count-badge').innerText = db.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-talisman-darkCard border border-talisman-darkBorder rounded-2xl p-4 flex flex-col justify-between space-y-4 shadow-xl hover:border-amber-500/50 transition-all group">
+                    <div class="relative w-full aspect-[3/4] bg-slate-950 rounded-xl overflow-hidden border border-slate-800 flex items-center justify-center">
+                        <img src="${item.imageData}" alt="부적" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 px-2.5 py-1 rounded-full text-[10px] font-bold font-batang shadow ${
+                            item.status === 'fulfilled' ? 'bg-emerald-900/80 text-emerald-200 border border-emerald-500/50' : 'bg-red-900/80 text-amber-200 border border-red-500/50'
+                        }">
+                            ${item.status === 'fulfilled' ? '소원 성취 ✨' : '기원 중 🙏'}
+                        </span>
+                    </div>
+
+                    <div class="space-y-1 text-left">
+                        <h4 class="font-batang font-bold text-amber-200 text-sm line-clamp-1">${item.wishText}</h4>
+                        <div class="flex items-center justify-between text-[11px] text-slate-400">
+                            <span>발원자: ${item.owner}</span>
+                            <span>${item.createdAt}</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
+                        ${item.status === 'active' ? `
+                            <button onclick="triggerFulfillmentBurn('${item.id}')" class="flex-1 py-1.5 rounded-lg bg-emerald-950/60 hover:bg-emerald-900 border border-emerald-500/40 text-emerald-200 text-xs font-bold transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="flame" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                소원 성취!
+                            </button>
+                        ` : `
+                            <span class="flex-1 text-center py-1.5 text-xs text-emerald-400 font-batang font-bold">성취 완수됨</span>
+                        `}
+                        <button onclick="deleteTalisman('${item.id}')" class="p-1.5 rounded-lg bg-slate-900 hover:bg-red-950/60 border border-slate-800 hover:border-red-500/40 text-slate-400 hover:text-red-300 transition-all" title="삭제">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        function filterGallery(type) {
+            state.galleryFilter = type;
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active', 'bg-amber-500/20', 'text-amber-300');
+                tab.classList.add('text-slate-400');
+            });
+            const activeTab = document.getElementById(`filter-${type}`);
+            if (activeTab) activeTab.classList.add('active', 'bg-amber-500/20', 'text-amber-300');
+            renderGallery();
+        }
+
+        function deleteTalisman(id) {
+            let db = getTalismansFromDB();
+            db = db.filter(item => item.id !== id);
+            localStorage.setItem('talisman_data_db', JSON.stringify(db));
+            renderGallery();
+            showToast("부적이 도감에서 삭제되었습니다.");
+        }
+
+        // Talisman Fire Burning Disintegration Animation
+        function triggerFulfillmentBurn(id) {
+            state.activeBurningTalismanId = id;
+            const db = getTalismansFromDB();
+            const talisman = db.find(t => t.id === id);
+            if (!talisman) return;
+
+            const modal = document.getElementById('burn-modal');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+
+            playJingSound();
+
+            const canvas = document.getElementById('burnCanvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+
+            img.onload = function() {
+                let progress = 0;
+                const particles = [];
+
+                function burnAnimate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                    // Flame Disintegration Effect Overlay
+                    if (progress < canvas.height) {
+                        ctx.fillStyle = '#000000';
+                        ctx.fillRect(0, canvas.height - progress, canvas.width, progress);
+
+                        // Flame Spark Edge
+                        ctx.fillStyle = '#ff4d4d';
+                        for (let i = 0; i < 25; i++) {
+                            particles.push({
+                                x: Math.random() * canvas.width,
+                                y: canvas.height - progress + (Math.random() * 20 - 10),
+                                radius: Math.random() * 4 + 2,
+                                vy: -Math.random() * 3 - 1
+                            });
+                        }
+                    }
+
+                    // Render Flame Particles
+                    for (let i = particles.length - 1; i >= 0; i--) {
+                        const p = particles[i];
+                        p.y += p.vy;
+                        ctx.fillStyle = `rgba(255, ${Math.floor(Math.random() * 150 + 50)}, 0, 0.8)`;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fill();
+                        if (p.y < 0) particles.splice(i, 1);
+                    }
+
+                    progress += 4;
+                    if (progress <= canvas.height + 60) {
+                        requestAnimationFrame(burnAnimate);
+                    }
+                }
+                burnAnimate();
+            };
+            img.src = talisman.imageData;
+        }
+
+        function closeBurnModal() {
+            if (state.activeBurningTalismanId) {
+                let db = getTalismansFromDB();
+                const talisman = db.find(t => t.id === state.activeBurningTalismanId);
+                if (talisman) {
+                    talisman.status = 'fulfilled';
+                    localStorage.setItem('talisman_data_db', JSON.stringify(db));
+                    renderGallery();
+                }
+            }
+            const modal = document.getElementById('burn-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            showToast("소원 성취 축원 부적이 하늘로 봉헌되었습니다! 축하합니다! 🎉");
+        }
+
+        function downloadCanvasImage() {
+            const canvas = document.getElementById('talismanCanvas');
+            const link = document.createElement('a');
+            link.download = `만복영험_부적_${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            showToast("부적 고화질 이미지 다운로드가 시작되었습니다.");
+        }
+
+        function openAuthModal() {
+            const modal = document.getElementById('auth-modal');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+        }
+
+        function closeAuthModal() {
+            const modal = document.getElementById('auth-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function handleAuthSubmit(e) {
+            e.preventDefault();
+            const user = document.getElementById('auth-username').value;
+            state.currentUser = user;
+            document.getElementById('user-display-name').innerText = user;
+            closeAuthModal();
+            showToast(`${user}님, 환영합니다! 만복록에 연동되었습니다.`);
+        }
+
+        function switchTab(tabId) {
+            state.currentTab = tabId;
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500/20', 'text-amber-300', 'border', 'border-amber-500/40');
+                btn.classList.add('text-slate-400');
+            });
+
+            const activeNav = document.getElementById(`nav-${tabId}`);
+            if (activeNav) {
+                activeNav.classList.add('bg-amber-500/20', 'text-amber-300', 'border', 'border-amber-500/40');
+                activeNav.classList.remove('text-slate-400');
+            }
+
+            if (tabId === 'gallery') renderGallery();
+            if (tabId === 'guide') renderGuideSteps();
+        }
+
+        function renderGuideSteps() {
+            const list = document.getElementById('guide-steps-list');
+            list.innerHTML = RITUAL_STEPS.map(s => `
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4 flex gap-3 items-start">
+                    <div class="w-10 h-10 rounded-full bg-red-950/60 border border-red-500/40 text-amber-300 flex items-center justify-center font-batang font-bold shrink-0">
+                        ${s.step}
+                    </div>
+                    <div>
+                        <h4 class="font-batang font-bold text-amber-200 text-sm">${s.title}</h4>
+                        <p class="text-xs text-slate-400 mt-1">${s.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showToast(msg) {
+            const box = document.getElementById('toast-box');
+            document.getElementById('toast-msg').innerText = msg;
+            box.classList.remove('translate-y-20', 'opacity-0');
+            box.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                box.classList.remove('translate-y-0', 'opacity-100');
+                box.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        window.onload = function() {
+            lucide.createIcons();
+            initTalismanCanvas();
+            renderGallery();
+        };
+    </script>
+<script>
+const JSON_DB_KEY='manbok_json_db_v2';
+let jsonDbHandle=null,jsonDb=null;
+function emptyJsonDB(){return {schemaVersion:2,app:'萬福靈驗 10단계 제사 의식',updatedAt:new Date().toISOString(),users:[],talismans:[],achievements:[],photos:[],session:{username:null}};}
+function normalizeJsonDB(d){const b=emptyJsonDB();d=d&&typeof d==='object'?d:{};return {...b,...d,users:Array.isArray(d.users)?d.users:[],talismans:Array.isArray(d.talismans)?d.talismans:[],achievements:Array.isArray(d.achievements)?d.achievements:[],photos:Array.isArray(d.photos)?d.photos:[],session:d.session&&typeof d.session==='object'?d.session:{username:null}};}
+function getDb(){if(!jsonDb){try{jsonDb=normalizeJsonDB(JSON.parse(localStorage.getItem(JSON_DB_KEY)||'null'));}catch(e){jsonDb=emptyJsonDB();}}return jsonDb;}
+function persistDb(){jsonDb=normalizeJsonDB(jsonDb);jsonDb.updatedAt=new Date().toISOString();localStorage.setItem(JSON_DB_KEY,JSON.stringify(jsonDb));if(jsonDbHandle)saveJsonDatabaseFile(true);}
+function updateJsonDbStatus(){const e=document.getElementById('json-db-status');if(!e)return;e.textContent=jsonDbHandle?'JSON DB: 파일 연결됨':'JSON DB: localStorage 백업 모드';e.className=jsonDbHandle?'text-[10px] text-emerald-400':'text-[10px] text-slate-500';}
+async function saveJsonDatabaseFile(silent=false){const db=getDb();const data=JSON.stringify(db,null,2);if(!jsonDbHandle){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'application/json'}));a.download='manbok_database.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);if(!silent)showToast('JSON DB 파일을 다운로드했습니다.');return true;}try{const w=await jsonDbHandle.createWritable();await w.write(data);await w.close();if(!silent)showToast('JSON DB에 저장되었습니다.');return true;}catch(e){console.error(e);if(!silent)showToast('JSON 파일 저장 실패');return false;}}
+async function createJsonDatabaseFile(){try{if(!window.showSaveFilePicker){await saveJsonDatabaseFile();return;}jsonDbHandle=await showSaveFilePicker({suggestedName:'manbok_database.json',types:[{description:'JSON',accept:{'application/json':['.json']}}]});jsonDb=emptyJsonDB();await saveJsonDatabaseFile(true);updateJsonDbStatus();showToast('새 JSON DB가 연결되었습니다.');}catch(e){if(e.name!=='AbortError')showToast('JSON DB 생성 실패');}}
+async function openJsonDatabaseFile(){try{if(!window.showOpenFilePicker){showToast('이 브라우저에서는 JSON 파일 직접 연결을 지원하지 않습니다.');return;}const[h]=await showOpenFilePicker({types:[{description:'JSON',accept:{'application/json':['.json']}}]});jsonDbHandle=h;jsonDb=normalizeJsonDB(JSON.parse(await(await h.getFile()).text()));localStorage.setItem(JSON_DB_KEY,JSON.stringify(jsonDb));restoreJsonSession();renderGallery();updateJsonDbStatus();showToast('JSON DB를 불러왔습니다.');}catch(e){if(e.name!=='AbortError'){console.error(e);showToast('JSON DB 형식 오류');}}}
+async function hashPassword(p){const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return [...new Uint8Array(d)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function handleAuthSubmit(e){e.preventDefault();const username=document.getElementById('auth-username').value.trim(),password=document.getElementById('auth-password').value;if(!username||!password)return;const db=getDb(),hash=await hashPassword(password),u=db.users.find(x=>x.username===username);if(u){if(u.passwordHash!==hash){showToast('비밀번호가 일치하지 않습니다.');return;}u.lastLoginAt=new Date().toISOString();showToast(username+'님, 로그인되었습니다.');}else{db.users.push({id:'usr_'+Date.now(),username,passwordHash:hash,createdAt:new Date().toISOString(),lastLoginAt:new Date().toISOString()});showToast(username+'님, 회원가입 및 로그인이 완료되었습니다.');}db.session={username};state.currentUser=username;state.wishOwner=username;document.getElementById('user-display-name').innerText=username;const oi=document.getElementById('wish-owner-input');if(oi)oi.value=username;const ol=document.getElementById('wish-owner-label');if(ol)ol.innerText='발원자: '+username;persistDb();closeAuthModal();renderGallery();}
+function restoreJsonSession(){const db=getDb(),u=db.session&&db.session.username;if(!u||!db.users.some(x=>x.username===u))return;state.currentUser=u;state.wishOwner=u;document.getElementById('user-display-name').innerText=u;const oi=document.getElementById('wish-owner-input');if(oi)oi.value=u;const ol=document.getElementById('wish-owner-label');if(ol)ol.innerText='발원자: '+u;}
+function getTalismansFromDB(){const u=state.currentUser;return u?getDb().talismans.filter(t=>t.owner===u):[];}
+function imageElementToDataURL(img){try{const c=document.createElement('canvas'),m=1000,s=Math.min(1,m/Math.max(img.naturalWidth||img.width,img.naturalHeight||img.height));c.width=Math.max(1,Math.round((img.naturalWidth||img.width)*s));c.height=Math.max(1,Math.round((img.naturalHeight||img.height)*s));c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.82);}catch(e){return null;}}
+function saveTalismanToDatabase(){if(!state.currentUser){showToast('먼저 로그인해주세요.');openAuthModal();return false;}const db=getDb(),id='tal_'+Date.now(),canvas=document.getElementById('talismanCanvas'),photo=state.targetPhotoImg?imageElementToDataURL(state.targetPhotoImg):null,item={id,owner:state.currentUser,wishText:getActiveWishText(),category:state.category,paperStyle:state.paperStyle,sealStyle:state.sealStyle,createdAt:new Date().toISOString(),status:'active',fulfilledAt:null,imageData:canvas.toDataURL('image/png'),targetPhoto:photo?{filename:document.getElementById('photo-file-name')?.innerText||'photo',dataUrl:photo}:null,customStrokes:state.customStrokes};db.talismans.unshift(item);if(photo)db.photos.unshift({id:'photo_'+Date.now(),talismanId:id,username:state.currentUser,filename:item.targetPhoto.filename,dataUrl:photo,createdAt:new Date().toISOString()});persistDb();renderGallery();return true;}
+function renderGallery(){const grid=document.getElementById('gallery-grid'),empty=document.getElementById('gallery-empty');if(!grid||!empty)return;const db=getTalismansFromDB(),f=db.filter(x=>state.galleryFilter==='active'?x.status==='active':state.galleryFilter==='fulfilled'?x.status==='fulfilled':true);document.getElementById('gallery-count-badge').innerText=db.length;if(!f.length){grid.innerHTML='';empty.classList.remove('hidden');return;}empty.classList.add('hidden');grid.innerHTML=f.map(x=>`<div class="bg-talisman-darkCard border border-talisman-darkBorder rounded-2xl p-4 flex flex-col justify-between space-y-4 shadow-xl"><div class="relative w-full aspect-[3/4] bg-slate-950 rounded-xl overflow-hidden border border-slate-800"><img src="${x.imageData}" class="w-full h-full object-contain">${x.targetPhoto?.dataUrl?`<img src="${x.targetPhoto.dataUrl}" class="absolute bottom-2 left-2 w-10 h-10 rounded-lg object-cover border border-amber-400/60">`:''}<span class="absolute top-2 right-2 px-2.5 py-1 rounded-full text-[10px] font-bold ${x.status==='fulfilled'?'bg-emerald-900/80 text-emerald-200':'bg-red-900/80 text-amber-200'}">${x.status==='fulfilled'?'소원 성취 ✨':'기원 중 🙏'}</span></div><div><h4 class="font-batang font-bold text-amber-200 text-sm">${String(x.wishText).replace(/[&<>]/g,'')}</h4><div class="text-[11px] text-slate-400">발원자: ${String(x.owner).replace(/[&<>]/g,'')} · ${new Date(x.createdAt).toLocaleDateString('ko-KR')}</div></div><div class="flex gap-2">${x.status==='active'?`<button onclick="triggerFulfillmentBurn('${x.id}')" class="flex-1 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 text-xs">소원 성취!</button>`:`<span class="flex-1 text-center text-xs text-emerald-400">성취 완수됨</span>`}<button onclick="deleteTalisman('${x.id}')" class="p-1.5 rounded-lg bg-slate-900 text-slate-400">삭제</button></div></div>`).join('');lucide.createIcons();}
+function deleteTalisman(id){const db=getDb();db.talismans=db.talismans.filter(x=>x.id!==id);db.photos=db.photos.filter(x=>x.talismanId!==id);db.achievements=db.achievements.filter(x=>x.talismanId!==id);persistDb();renderGallery();showToast('기록이 삭제되었습니다.');}
+function closeBurnModal(){if(state.activeBurningTalismanId){const db=getDb(),x=db.talismans.find(t=>t.id===state.activeBurningTalismanId&&t.owner===state.currentUser);if(x){x.status='fulfilled';x.fulfilledAt=new Date().toISOString();db.achievements.unshift({id:'ach_'+Date.now(),username:state.currentUser,talismanId:x.id,type:'wish_fulfilled',wishText:x.wishText,achievedAt:x.fulfilledAt,photoRecorded:!!x.targetPhoto});persistDb();renderGallery();}state.activeBurningTalismanId=null;}const m=document.getElementById('burn-modal');m.classList.remove('opacity-100');m.classList.add('opacity-0','pointer-events-none');showToast('성취 여부와 사진 기록이 JSON DB에 저장되었습니다.');}
+window.addEventListener('load',()=>{getDb();restoreJsonSession();updateJsonDbStatus();renderGallery();});
+</script>
+
+</body>
+</html>
