@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>소원을 들어주는 사이트</title>
+    <title>만복영험 10단계 제사 의식 신령한 부적 시스템</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -230,7 +230,7 @@
                         <span class="text-slate-500 text-[11px]" id="wish-owner-label">발원자: 무명</span>
                     </label>
                     <input type="text" id="wish-target-input" value="신화급 전설 아이템 득템" 
-                           oninput="updateTalismanCanvas()"
+                           oninput="updateWishTarget(this.value)"
                            class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-amber-200 font-batang placeholder-slate-500 focus:outline-none focus:border-amber-500">
                 </div>
 
@@ -1025,7 +1025,15 @@
             ctx.restore();
         }
 
+        function updateWishTarget(value) {
+            state.wishTarget = String(value ?? '').trim();
+            updateTalismanCanvas();
+        }
+
         function getTalismanTitle() {
+            // 성취 대상 입력값을 그대로 부적 제목으로 사용
+            const target = (document.getElementById('wish-target-input')?.value || state.wishTarget || '').trim();
+            if (target) return target;
             const custom = (state.customWishText || document.getElementById('custom-wish-input')?.value || '').trim();
             if (custom) return custom;
             return '萬福靈驗 勅令';
