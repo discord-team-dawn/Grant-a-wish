@@ -330,6 +330,11 @@
                 <!-- Canvas Wrapper with Traditional Border Box -->
                 <div id="talisman-canvas-wrapper" class="relative p-3 rounded-2xl bg-slate-950 border border-amber-500/30 shadow-2xl max-w-md w-full flex flex-col items-center group">
                     <canvas id="talismanCanvas" width="450" height="650" class="w-full h-auto max-w-[380px] rounded-xl shadow-inner cursor-crosshair transition-all duration-300"></canvas>
+
+                    <button id="photo-only-btn" onclick="togglePhotoOnlyBackground()" class="w-full mt-3 py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="image" class="w-4 h-4"></i>
+                        <span>배경(업로드한 사진)만 있게</span>
+                    </button>
                     
                     <!-- Overlay Hints -->
                     <div class="absolute bottom-6 bg-black/70 backdrop-blur border border-amber-500/30 px-3 py-1 rounded-full text-[11px] text-amber-200 pointer-events-none transition-opacity opacity-80 group-hover:opacity-10">
@@ -572,6 +577,7 @@
             wishOwner: '소원성취자',
             customWishText: '',
             targetPhotoImg: null,
+            photoOnlyBackground: false,
             brushColor: '#c0392b',
             customStrokes: [],
             isDrawing: false,
@@ -893,6 +899,29 @@
                 ctx.restore();
             }
 
+            // 사진만 보기 모드: 업로드한 사진을 캔버스 전체 배경으로 표시하고
+            // 부적 테두리/문구/장식은 그리지 않습니다.
+            if (state.photoOnlyBackground) {
+                if (!state.targetPhotoImg) {
+                    state.photoOnlyBackground = false;
+                    updatePhotoOnlyButton();
+                } else {
+                    ctx.save();
+                    const img = state.targetPhotoImg;
+                    const iw = img.naturalWidth || img.width;
+                    const ih = img.naturalHeight || img.height;
+                    const scale = Math.max(w / iw, h / ih);
+                    const dw = iw * scale;
+                    const dh = ih * scale;
+                    const dx = (w - dw) / 2;
+                    const dy = (h - dh) / 2;
+                    ctx.globalAlpha = 1;
+                    ctx.drawImage(img, dx, dy, dw, dh);
+                    ctx.restore();
+                    return;
+                }
+            }
+
             // 2. Traditional Double Outer Border
             ctx.strokeStyle = textColor;
             ctx.lineWidth = 6;
@@ -1100,6 +1129,31 @@
             updateTalismanCanvas();
         }
 
+        function updatePhotoOnlyButton() {
+            const btn = document.getElementById('photo-only-btn');
+            if (!btn) return;
+            const span = btn.querySelector('span');
+            if (state.photoOnlyBackground) {
+                btn.classList.remove('bg-slate-800', 'border-slate-700', 'text-slate-200');
+                btn.classList.add('bg-amber-900/50', 'border-amber-500', 'text-amber-200');
+                if (span) span.innerText = '부적 내용 다시 표시';
+            } else {
+                btn.classList.remove('bg-amber-900/50', 'border-amber-500', 'text-amber-200');
+                btn.classList.add('bg-slate-800', 'border-slate-700', 'text-slate-200');
+                if (span) span.innerText = '배경(업로드한 사진)만 있게';
+            }
+        }
+
+        function togglePhotoOnlyBackground() {
+            if (!state.targetPhotoImg) {
+                showToast('먼저 사진을 업로드해주세요.');
+                return;
+            }
+            state.photoOnlyBackground = !state.photoOnlyBackground;
+            updatePhotoOnlyButton();
+            updateTalismanCanvas();
+        }
+
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -1111,6 +1165,7 @@
                     state.targetPhotoImg = img;
                     document.getElementById('photo-file-name').innerText = file.name;
                     document.getElementById('remove-photo-btn').classList.remove('hidden');
+                    updatePhotoOnlyButton();
                     updateTalismanCanvas();
                     showToast("대상 이미지가 성공적으로 첨부되었습니다.");
                 };
@@ -1121,6 +1176,7 @@
 
         function removePhoto() {
             state.targetPhotoImg = null;
+            state.photoOnlyBackground = false;
             document.getElementById('target-photo-input').value = '';
             document.getElementById('photo-file-name').innerText = '이미지 파일 선택';
             document.getElementById('remove-photo-btn').classList.add('hidden');
@@ -1136,6 +1192,7 @@
         function resetTalismanForm() {
             state.customStrokes = [];
             state.targetPhotoImg = null;
+            state.photoOnlyBackground = false;
             document.getElementById('wish-target-input').value = '신화급 전설 아이템 득템';
             document.getElementById('wish-owner-input').value = '소원성취자';
             setCategory('boss');
